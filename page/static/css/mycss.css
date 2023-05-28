@@ -1,9 +1,67 @@
+/* общий фон*/
+.full-width-block {
+  background: rgb(236,240,253);
+  background: linear-gradient(180deg, rgba(236,240,253,1) 0%, rgba(255,255,255,1) 83%);
+  width: 100%;
+  background-size: 100% 100%;
+}
+/* панель с контактами */
+.contact-panel {
+  background-color: #ffffff;
+  border-top: 1px solid #cccccc;
+  padding: 5px 0;
+}
+.contact-panel ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.contact-panel li {
+  margin: 0 10px;
+}
+.contact-panel a {
+  color: #292f71;
+  text-decoration: none;
+  font-size: 80%;
+  display: inline-block;
+  line-height: 1;
+  cursor: pointer;
+}
+.contact-panel a:after {
+  background-color: #f66d52; /* Цвет линии при наведении на нее курсора мыши */
+  display: block;
+  content: "";
+  height: 4px; /* Высота линии */
+  width: 0%;
+  -webkit-transition: width .3s ease-in-out;
+  -moz--transition: width .3s ease-in-out;
+  transition: width .3s ease-in-out;
+}
+.contact-panel a:hover:after,
+.contact-panel a:focus:after {
+    width: 100%;
+}
+.contact-panel img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  height: 25px;
+}
+/* для маленького экрана */
+@media (max-width: 767px) {
+  .contact-panel {
+   display: none;
+  }
+}
 /* шапка сайта */
-.navbar {
+.head {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #659DBD;
+  background: #5c5670;
   color: #fff;
 }
 
@@ -31,42 +89,436 @@
 .navbar-menu a {
   color: #fff;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 80%;
   font-weight: bold;
 }
 
-/* меню в шапке */
-nav {
-  background-color: none;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+/* navbar menu */
+.navbar {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #a4b2fa;
 }
 
-nav li {
+.navbar-nav {
+  margin: 0 auto;
+}
+
+.navbar-brand {
+  margin-right: auto;
+  margin-left: auto;
+}
+.navbar-nav .nav-link {
+  color: #ffffff; /* Цвет текста кнопок */
+  transition: background-color 0.3s, color 0.3s; /* Плавный переход при наведении */
+  padding: 0px 15px;
+  margin-right: 15px;
+  font-weight: 150;
+  font-size: 100%;
+  border-radius: 15px;
+  font-weight: bold;
+  transition: 1s linear;
+  display: inline-block;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+}
+.navbar-nav .nav-link:after {
+  background-color: #f66d52; /* Цвет линии при наведении на нее курсора мыши */
+    display: block;
+    content: "";
+    height: 4px; /* Высота линии */
+    width: 0%;
+    -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+}
+.navbar-nav .nav-link:hover:after, .navbar-nav .nav-link:focus:after {
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
+  }
+}
+/* блок 1 */
+.content-block {
+  max-width: 1000px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 13px 1px #c2c2c2;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Изменено на flex-start для выравнивания элементов по верхнему краю */
+  position: relative; /* Добавлено свойство для позиционирования полосы */
+}
+.content-block::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%; /* Подстройте позицию для центрирования линии */
+  transform: translate(-50%, -50%); /* Подстройте позицию для центрирования линии */
+  width: 100%;
+  height: 2px;
+  background-color: gold;
+  z-index: -1; /* Переместите линию позади текста */
+}
+
+.header-text {
+  text-align: center;
+  font-weight: bold;
+  color: #292f71;
+  font-size: 110%;
+  background: none;
+  margin: 5px 0;
+}
+.blocktext {
+  margin-left: 20px;
+  text-align: justify; /* Выравнивание текста по ширине */
+  padding: 5px;
+  font-size: 100%;
+}
+.blocktext1 {
+  font-size: 70%;
+}
+
+.block1-img {
+  height: auto;
+  width: 230px;
+  margin-top: 0; /* Добавлено свойство для установки отступа сверху в 0 */
+  margin-right: 20px;
+}
+@media (max-width: 767px) {
+  .content-block {
+    flex-direction: column;
+  }
+  .blocktext {
+    margin-left: 0;
+    margin-top: 20px;
+    font-size: 100%;
+  }
+  .block1-img {
+    margin: 0 auto;
+  }
+}
+/* блок 2 */
+.grid-container {
+  display: flex;
+  max-width: 1000px;
+  padding: 10px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 13px 1px #c2c2c2;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  margin: 0 auto;
+  justify-content: space-between; /*  space-between для равномерного распределения гридов, а space-between для переноса не помещающегося */
+  flex-wrap: wrap;
+  border-spacing: 10px; /* Отступ между гридами */
+  border-collapse: separate; /* Раздельные границы */
+}
+.grid {
+  width: 50%; /* Изменена ширина грида */
+  height: 150px; /* Изменена высота грида */
+  position: relative;
+  border: 4px solid #ffffff; /* Ширина и цвет границы */
+}
+
+.grid .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #eaf2ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s;
+  word-break: break-word; /* Добавлено для переноса текста на новую строку */
+
+}
+.grid .content img {
+  width: 85px;
+  height: 85px;
+}
+
+.grid .content p {
+  margin-top: 10px;
+  color: rgb(146, 57, 1);
+  font-size: 100%;
+}
+
+.grid .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 196, 200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.grid:hover .content {
+  opacity: 0;
+}
+
+.grid:hover .overlay {
+  opacity: 1;
+}
+
+.grid:hover .overlay p {
+  color: rgb(255, 255, 255);
+  text-align: center; /* Изменено на text-align: center */
+  font-size: 100%;
+}
+/* блок 3 */
+.service-conteiner {
+  max-width: 1000px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 13px 1px #c2c2c2;
+  padding: 20px;
+}
+#services {
+  text-align: center;
+  padding: 10px;
+}
+
+.service-item {
+  margin: 20px;
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+}
+
+.service-item img {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+.service-item h3 {
+  color: #333;
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.service-item p {
+  color: #666;
+  font-size: 16px;
+}
+
+@media (min-width: 600px) {
+  .service-item {
+      width: 45%;
+  }
+}
+
+@media (min-width: 900px) {
+  .service-item {
+      width: 30%;
+  }
+}
+
+/* блок с прайсом */
+.price-container {
+  max-width: 1000px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 13px 1px #c2c2c2;
+  padding: 20px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.price-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.price-item {
+  width: 300px;
+  padding: 20px;
+  background-color: #eaf2ff;
+  border-radius: 5px;
+  margin: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.item-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.item-description {
+  font-size: 16px;
+  color: #666666;
+  margin-bottom: 10px;
+  text-align:justify;
+  hyphens: auto;
+}
+
+.item-price {
+  font-size: 18px;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.contact-button {
+  margin-top: 20px;
+}
+
+
+/* блок с контакатами */
+.container-contact {
+    max-width: 1000px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 13px 1px #c2c2c2;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    margin: 0 auto; /* Центрирование контейнера по горизонтали */
+}
+
+.item-contact {
+  width: 100%; /* Изменена ширина элемента на 100% для полного заполнения контейнера */
+  height: auto; /* Изменена высота элемента на auto для адаптивности */
+  border: none; /* Удалена граница */
+  padding: 0; /* Удалены отступы */
+  font-size: 120%;
+}
+
+.contact-text {
+  text-align: center; /* Изменено на центрирование текста по центру */
+  margin-bottom: 10px; /* Добавлен отступ снизу для разделения контактной информации и карты */
+  font-size: 100%;
+}
+
+.contact-block {
+  background-color: #ffffff;
+  padding: 5px 0;
+  text-align: center; /* Изменено на центрирование текста по центру */
+}
+
+.contact-block ul {
+  padding: 0;
   margin: 0;
 }
 
-nav a  {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-right: 15px; /* рассмотрение между кнопками */
-  color: #292f71;
-  text-decoration: none;
-  border-radius: 20px;
-  background-color: #ffffff;
-  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-  font-weight: 150;
-  font-size: 1.0em;
+.contact-block li {
+  list-style-type: none;
+  margin-bottom: 10px; /* Добавлен отступ снизу для разделения контактных данных */
 }
 
-nav a:hover {
-  color: #ffffff;
-  background-color: #292f71;
+.contact-block img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  height: 25px;
+}
+
+.contact-block a {
+  display: inline-block;
+  line-height: 1;
+  text-decoration: none; /* Убираем подчеркивание */
+  cursor: pointer;
+  color: #5c5670;
+  font-size:100%;
+}
+.contact-block a:after {
+  background-color: #f66d52; /* Цвет линии при наведении на нее курсора мыши */
+  display: block;
+  content: "";
+  height: 5px; /* Высота линии */
+  width: 0%;
+  -webkit-transition: width .3s ease-in-out;
+  -moz--transition: width .3s ease-in-out;
+  transition: width .3s ease-in-out;
+}
+.contact-block a:hover:after,
+.contact-block a:focus:after {
+    width: 100%;
+}
+.contact-block p {
+  margin: 0;
+}
+
+.contact-block iframe {
+  width: 100%; /* Изменена ширина карты на 100% для полного заполнения контейнера */
+  height: 400px; /* Изменена высота карты на фиксированную высоту */
+  border: none; /* Удалена граница */
+  margin-bottom: 10px; /* Добавлен отступ снизу для разделения карты и контактной информации */
+}
+
+/* отзывы яндекс */
+.widget-container {
+  width: 560px;
+  height: 800px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto; /* Центрирование контейнера по горизонтали */
+}
+
+.widget-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.widget-container a {
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #b3b3b3;
+  font-size: 10px;
+  font-family: YS Text, sans-serif;
+  padding: 0 20px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  max-height: 14px;
+  white-space: nowrap;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 480px) {
+  .widget-container {
+    width: 100%;
+    height: 300;
+    padding-bottom: 0;
+  }
+
+  .widget-container iframe {
+    border-radius: 0;
+  }
 }
 
 /* footer */
@@ -93,126 +545,4 @@ footer {
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 0;
-}
-
-/* панель с контактами */
-.contact-panel {
-  background-color: #ffffff;
-  border-top: 1px solid #cccccc;
-  padding: 5px 0;
-}
-.contact-panel ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.contact-panel li {
-  margin: 0 10px;
-}
-.contact-panel a {
-  color: #292f71;
-  text-decoration: none;
-  font-size: 15px;
-
-}
-.contact-panel span {
-  color: #292f71;
-  text-decoration: none;
-  font-size: 15px;
-
-}
-.contact-panel img {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 5px;
-  height: 25px;
-}
-
-/* карусель */
-.full-block-carusel {
-  width: 100%;
-  background-size: 100%;
-  margin-bottom: 15px;
-}
-.carousel-container {
-  width: 600px;
-  height: 300px;;
-  margin: 0 auto;
-  margin-bottom: 25px;
-}
-
-/* общий фон*/
-.full-width-block {
-  background: rgb(212,243,255);
-  background: linear-gradient(180deg, rgba(212,243,255,1) 0%, rgba(255,255,255,1) 74%);
-  width: 100%;
-  background-size: 100% 100%;
-}
-
-/* блок 1 */
-.content-block {
-  max-width: 960px;
-  margin:  auto;
-  padding: 20px;
-  background-color: #ffffff;
-  box-shadow: 0px 0px 13px 1px #C1C1C1;1;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-p.blocktext {
-  margin-left: auto;
-  margin-right: auto;
-  width: 55em;
-  text-align:justify
-}
-.header-text {
-  text-align: center;
-  font-weight: bold;
-  color: #292f71;
-  font-size: 16pt;
-}
-/* блок с контакатами */
-.contact-block {
-  background-color: #ffffff;
-  padding: 5px 0;
-  text-align: justify;
-}
-.contact-block span {
-  color: #292f71;
-  text-decoration: none;
-  font-size: 15px;
-
-}
-.contact-block img {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 5px;
-  height: 25px;
-}
-.contact-block li {
-  margin: 0 10px;
-  list-style-type: none;
-}
-.contact-text {
-  text-align: justify;
-  font-weight: bold;
-  color: #292f71;
-  font-size: 13pt;
-  text-align: center;
-}
-.container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.item {
-  width: 50%;
-  height: 50%;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  padding: 10px;
 }

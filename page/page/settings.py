@@ -25,7 +25,7 @@ SECRET_KEY = '+)vab2+0q_a7b4it#g7t12zl0bm6&@^3tg#txlnqdsgz9xf+)2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [cz55835-django-fbhc6.tw1.ru]
+ALLOWED_HOSTS = ["sychev.cz55835.tw1.ru"]
 
 
 # Application definition
@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'page.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': "cz55835_sychev",
+        'USER': 'cz55835_sychev',
+        'PASSWORD': '463234041',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -119,5 +123,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')] 
+STATIC_URL = '/Sychev/page/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+ADMIN_MEDIA_PREFIX = '/Sychev/venv/lib/python3.6/site-packages/django/contrib/admin/static'

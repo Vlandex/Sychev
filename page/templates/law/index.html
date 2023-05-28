@@ -4,81 +4,150 @@
 {{ title }}
 {% endblock %}
 {% block content %}
+<!--первый блок-->
 <div class="full-width-block">
+  <p class="header-text">Квалифицированная юридическая помощь</p>
   <div class="content-block">
-    <p class="header-text">Квалифицированная юридическая помощь</p>
-    <p class="blocktext">Юридическая консультация Александра Сычева находится в городе Магнитогорске и специализируется на оказании правовой помощи гражданам и компаниям.  
-    <p class="blocktext">Успешно защищать права наших клиентов нам удается благодаря широкому набору компетенций и обширному опыту в деле отстаивания интересов наших клиентов.</p>
-    <p class="blocktext">В нашей юридической консультации мы оказываем правовую помощь вопросам разршения споров в досудебном и судебном порядке, экспертиза и подготовка гражданско-правовых сделок, соблюдения прав клиента при проведении проверок органами власти и другой спектр услуг.</p>
-    <p class="blocktext">При исполнении поручений клиента, мы всегда исходим из необходимости максимального</p>
+    <div>
+      <p class="blocktext">Мы рады приветствовать вас и предложить наши профессиональные юридические услуги. "Правосудие" - это надежный партнер в области правовой поддержки и сопровождения судебных споров.</p>
+      <p class="blocktext">Наша цель - защитить ваши интересы и обеспечить успешное разрешение ваших юридических вопросов. Мы понимаем, что судебные споры могут быть сложными и требуют профессионального подхода. Поэтому наша команда опытных юристов готова предоставить вам свои знания и навыки для достижения желаемых результатов.</p>
+      <p class="blocktext">Мы ценим доверие наших клиентов и стремимся к высокому уровню качества услуг. Ваш успех и удовлетворение - наша главная цель. Мы гордимся своей репутацией надежного и компетентного партнера в сфере юридических услуг.</p>
+      <p class="blocktext">Свяжитесь с нами сегодня и начните решение своих юридических вопросов с нами. Мы готовы стать вашим надежным партнером.</p>
+    </div>
+    <div>
+      <img class="block1-img" src="{% static 'img/Sychev.png' %}" alt="Logo">
+      <p class="blocktext1">Александр Сычев, основатель юридической фирмы "Правосудие".</p>
+    </div>
   </div>
-  <p class="header-text">Наши преимущества</p>
-    {% comment %}
-    карусель 
-    {% endcomment %}
-  <div class="content-block">
-    <div class="full-block-carusel">
-      <div class="carousel-container">
-        <div id="carouselExampleCaptions" class="carousel slide">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src={%static "img/carusel1.jpg"%} class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5 style="background-color: #4e84f874;">Ведем дела клиентов как свои</h5>
-                <p style="background-color: #4e84f874;">Внешне с холодной головой, но внтури души будет остаивать ваши интересы как собственные</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src={%static "img/carusel2.jpg"%} class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5 style="background-color: #4e84f874;">Не обещаем невыполнимого</h5>
-                <p style="background-color: #4e84f874;">После консультации юрист подробно сообщит Вам все возможные перспективы спора, а также предоставит предложения</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src={%static "img/carusel3.jpg"%} class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5 style="background-color: #4e84f874;">Для нас доброе имя дороже денег</h5>
-                <p style="background-color: #4e84f874;">Мы дорожим своей репутацией и стремимся к долгосрочному сотрудничеству</p>
-              </div>
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Предыдущий</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Следующий</span>
-          </button>
-        </div>
+</div>
+ <!--блок наши преимущества-->
+  <p class="header-text">Наши ценности:</p>
+  <div class="grid-container">
+    <div class="grid">
+      <div class="content">
+        <img src={% static "img/libra.png"%} alt="Image 1">
+        <p>Ясность</p>
+      </div>
+      <div class="overlay">
+        <p>Консультации и заключения всегда на ясном и понятном для вас языке</p>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="content">
+        <img src={% static "img/know.png"%} alt="Image 2">
+        <p>Знания</p>
+      </div>
+      <div class="overlay">
+        <p>Совершенствуем свои профессиональные навыки и следим за актуальными практиками</p>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="content">
+        <img src={% static "img/effect.png"%} alt="Image 3">
+        <p>Эффективность</p>
+      </div>
+      <div class="overlay">
+        <p>Исполняем поручения наименее затратно и быстро для клиента. </p>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="content">
+        <img src={% static "img/prof.png"%} alt="Image 1">
+        <p>Профессионализм</p>
+      </div>
+      <div class="overlay">
+        <p>Обширная практика по судебной и договорной работе</p>
       </div>
     </div>
   </div>
+  </div>
+  <!--блок с перечнем услуг-->
+  <p class="header-text">Стоимость услуг:</p>
+  <div class="price-container">
+    <div class="price-list">
+      <div class="price-item">
+        <h3 class="item-title">Юридические консультации</h3>
+        <p class="item-description">Профессиональная юридическая консультация по вашим вопросам. Наши квалифицированные юристы предоставят вам информацию, советы и рекомендации в отношении правовых вопросов, с которыми вы сталкиваетесь. Мы предложим стратегии для решения юридических вопросов, с которыми вы сталкиваетесь.</p>
+        <hr>
+        <p class="item-price">от $50</p>
+      </div>
+      <div class="price-item">
+        <h3 class="item-title">Составление документов</h3>
+        <p class="item-description">Составление договоров, уведомлений, писем и претензий. Мы обеспечим профессиональное составление необходимых документов, учитывая ваши требования и цели.</p>
+        <hr>
+        <p class="item-price">от $100</p>
+      </div>
+      <div class="price-item">
+        <h3 class="item-title">Судебное сопровождение</h3>
+        <p class="item-description">Мы предлагаем как подготовку процессуальной позиции (иск, возражения на иск, заявления и ходатайства), так и комплексное сопровождение судебного спора юристом в качестве вашего представителя. Юрист убедительно и аргументировано будет отстаивать Вашу позицию на протяжении всего спора.</p>
+        <hr>
+        <p class="item-price">от $200</p>
+      </div>
+      <div class="price-item">
+        <h3 class="item-title">Защита интересов в административных органах</h3>
+        <p class="item-description">Мы поможем вам в вопросах, связанных с административными правонарушениями, административными расследованиями и административными процедурами. Наши опытные юристы будут представлять ваши интересы перед государственными органами, предоставлять консультации, аргументировать вашу позицию и принимать меры для защиты ваших прав.</p>
+        <hr>
+        <p class="item-price">от $300</p>
+      </div>
+      <div class="price-item">
+        <h3 class="item-title">Создание компании</h3>
+        <p class="item-description">Мы поможем вам разработать учредительные документы, включая устав и другие необходимые документы, с учетом ваших требований и специфики вашего бизнеса. Наши юристы также обеспечат осуществление государственной регистрации компании, включая подготовку и подачу необходимых документов в соответствующие органы.</p>
+        <hr>
+        <p class="item-price">от $300</p>
+      </div>
+      <div class="price-item">
+        <h3 class="item-title">Наследственные услуги</h3>
+        <p class="item-description">Комплексная помощь в наследственных вопросах, профессиональная поддержка и решение правовых аспектов, связанных с наследованием и завещанием. Мы поможем вам в оформлении наследства или же завещания.</p>
+        <hr>
+        <p class="item-price">от $300</p>
+      </div>
+      <div class="price-item">
+        <h3 class="item-title">Защита трудовых прав</h3>
+        <p class="item-description">Мы поможем вам в вопросах, связанных с нарушением трудовых прав, дискриминацией, незаконным увольнением, несоблюдением рабочих условий и другими проблемами, связанными с трудовыми отношениями. Мы будем представлять ваши интересы перед работодателем или в компетентных органах, обеспечивая консультации, аргументацию и юридическую поддержку.</p>
+        <hr>
+        <p class="item-price">от $300</p>
+      </div>
+      <div class="price-item">
+        <h3 class="item-title">Семейные споры</h3>
+        <p class="item-description">Мы поможем вам в вопросах, связанных с разводом, разделом имущества, определением родительских прав и обязанностей, установлением алиментов и других семейно-правовых вопросах. Наши опытные юристы будут представлять ваши интересы в суде или в процессе медиации, предоставлять консультации, аргументировать вашу позицию и помогать достигнуть справедливого и разумного решения спора.</p>
+        <hr>
+        <p class="item-price">от $300</p>
+      </div>
+      <div class="price-item">
+        <h3 class="item-title">Сопровождение исполнительного производства</h3>
+        <p class="item-description">Сопровождение процедуры принудительного взыскания денедных средств или истребования имущества в рамках исполнительного производства. Наши юристы будут представлять ваши интересы в суде или перед исполнительными органами, предоставлять консультации, предлагать механизмы обеспечения исполнения решения суда.</p>
+        <hr>
+        <p class="item-price">от $300</p>
+      </div>
+    </div>
+    
+    <div class="contact-button">
+      <a href="контактная-страница.html" class="btn">Записаться</a>
+    </div>
+  </div>
+  <!--Блок с контактной информацией-->
   <p class="header-text">Контактная информация</p>
-  <div class="content-block">
+  <div class="container-contact">
     <div class="contact-block">
       <ul>
-        <div class="container">
-          <div class="item"><li><img src={% static "img/tel.png"%} alt="Телефон"><span>Tel.:+7 (999) 587-60-02</span></li></div>
-            <div class="item"><li><img src={% static "img/mail.png"%} alt="Почта"> <a href="mailto:yuristmgn@mail.ru" style="text-decoration:none">Email: yuristmgn@mail.ru</a></li></div>
-              <div class="item"><li><img src={% static "img/vk.png"%} alt="Вконтакте"> <a href="https://vk.com/pravosudiemgn" style="text-decoration:none">Вконтакте</a></li></div>
-                <div class="item"><li><img src={% static "img/WhatsApp.png"%} alt="WhatsApp"> <a href="https://api.whatsapp.com/send/?phone=89995876002&text&type=phone_number&app_absent=0" style="text-decoration:none">WhatsApp</a></li></div>
-        </div>
+          <div class="item-contact"><li><img src={% static "img/tel.png"%} alt="Почта"> <a href="tel:+7 (999) 587-60-02" target="_blank">Tel.:+7 (999) 587-60-02</a></li></div>
+            <div class="item-contact"><li><img src={% static "img/mail.png"%} alt="Почта"> <a href="mailto:yuristmgn@mail.ru" style="text-decoration:none" target="_blank">Email: yuristmgn@mail.ru</a></li></div>
+              <div class="item-contact"><li><img src={% static "img/vk.png"%} alt="Вконтакте"> <a href="https://vk.com/id77508688" style="text-decoration:none" target="_blank">Вконтакте</a></li></div>
+                <div class="item-contact"><li><img src={% static "img/WhatsApp.png"%} alt="WhatsApp"> <a href="https://wa.me/79995876002?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%92%D0%B0%D1%81%20%D0%B1%D0%B5%D1%81%D0%BF%D0%BE%D0%BA%D0%BE%D1%8F%D1%82%20%D0%BF%D0%BE%20%D0%BF%D0%BE%D0%B2%D0%BE%D0%B4%D1%83%20%D1%8E%D1%80%D0%B8%D0%B4%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D1%85%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%20%D0%BD%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B5%20%22%D0%9F%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D1%83%D0%B4%D0%B8%D0%B5%22" style="text-decoration:none" target="_blank">WhatsApp</a></li></div>
       </ul>
+      <p class="contact-text">Запишитесь на консультацию по интересующему вас вопросу, и мы найдем его решение.</p>
       <p class="contact-text">Наш офис расположен по адресу: <a href="https://yandex.ru/maps/-/CCUkBID0xD" target="_blank">г. Магнитогорск, ул. Николая Шишка, 9</a></p>
       <p class="contact-text">Часы работы пн. — пт. c 9 до 18</p>
+      <p class="contact-text">В выходные и праздничные дни по предварительной записи.</p>
       <div style="display: flex;justify-content:center"><a href="https://yandex.ru/maps/235/magnitogorsk/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;"></a><a href="https://yandex.ru/maps/235/magnitogorsk/?from=mapframe&ll=58.991382%2C53.434526&mode=usermaps&source=mapframe&um=constructor%3Ac5fe9a9c97e8dc38bfb05937604bf93775d0ea129c466954e7df8d79eb7f066f&utm_medium=mapframe&utm_source=maps&z=15" style="color:#eee;font-size:12px;position:absolute;top:14px;"></a><iframe src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=58.991382%2C53.434526&mode=usermaps&source=mapframe&um=constructor%3Ac5fe9a9c97e8dc38bfb05937604bf93775d0ea129c466954e7df8d79eb7f066f&utm_source=mapframe&z=15" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
     </div>
-  </div>   
+  </div>
+  <p class="header-text">Отзывы</p>
+  <div class="widget-container">
+    <iframe src="https://yandex.ru/maps-reviews-widget/33006008098?comments"></iframe>
+    <a href="https://yandex.ru/maps/org/yuridicheskiye_uslugi/33006008098/" target="_blank">Юридические услуги на карте Магнитогорска — Яндекс Карты</a>
+  </div>
+    <p></p>   
 </div>
 
-    
-
-     
 {% endblock %}

@@ -5,13 +5,16 @@ def index(request):
     title = 'Юридическая фирма "Правосудие". г. Магнитогорск'
     context = {
         'title': title,
-        'text': 'Главная страница',
     }
     return render(request, template, context) 
 
 def article(request):
     template = 'law/article.html'
-    return render(request, template)
+    title = 'Юридическая фирма "Правосудие". г. Магнитогорск | Полезные записи'
+    context = {
+        'title': title,
+    }
+    return render(request, template, context)
 
 def reviews(request):
     template = 'law/reviews.html'
